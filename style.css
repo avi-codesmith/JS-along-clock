@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+  user-select: none;
+}
+html {
+  font-size: 62.5%;
+}
+
+.box {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  transition: all 900ms;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  height: 2.2vw;
+  width: 2.2vw;
+  background-color: #1864ab;
+  /* box-shadow: 0px 0px 1rem 0.5rem rgba(0, 0, 0, 0.25); */
+  border-radius: 50%;
+  z-index: 999;
+}
+.clock {
+  position: relative;
+  height: 40vw;
+  width: 40vw;
+  background-size: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5rem 5px #4dabf7;
+}
+
+#hour,
+#minute,
+#second {
+  position: absolute;
+  border-radius: 10px;
+  transform-origin: bottom;
+}
+
+#hour {
+  width: 1.8%;
+  height: 25%;
+  top: 25%;
+  left: 48.85%;
+  opacity: 0.8;
+  background-color: #1864ab;
+}
+
+#minute {
+  width: 1.6%;
+  height: 35%;
+  top: 15%;
+  left: 48.9%;
+  opacity: 0.8;
+  background-color: #1971c2;
+}
+
+#second {
+  width: 1%;
+  height: 40%;
+  top: 9%;
+  left: 49.25%;
+  opacity: 0.8;
+  background-color: #e03131;
+}
+.number-box {
+  color: #d0ebff;
+}
+.clock .number {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 4vw;
+  text-align: center;
+}
+.clock .number-1 {
+  transform: rotate(30deg);
+}
+.clock .number-2 {
+  transform: rotate(60deg);
+}
+.clock .number-3 {
+  transform: rotate(90deg);
+}
+.clock .number-4 {
+  transform: rotate(120deg);
+}
+.clock .number-5 {
+  transform: rotate(150deg);
+}
+.clock .number-6 {
+  transform: rotate(180deg);
+}
+.clock .number-11 {
+  transform: rotate(-30deg);
+}
+.clock .number-10 {
+  transform: rotate(-60deg);
+}
+.clock .number-9 {
+  transform: rotate(-90deg);
+}
+.clock .number-8 {
+  transform: rotate(-120deg);
+}
+.clock .number-7 {
+  transform: rotate(-150deg);
+}
+
+@media (max-width: 530px) {
+  .clock {
+    height: 60vw;
+    width: 60vw;
+  }
+}
+@media (max-width: 475px) {
+  .clock {
+    height: 70vw;
+    width: 70vw;
+  }
+}
